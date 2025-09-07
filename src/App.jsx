@@ -17,6 +17,7 @@ function App() {
       {/* Particle System */}
       <ParticleBackground />
       
+      
       {/* Main Content */}
       <div className="relative z-10">
         <Header />
