@@ -71,7 +71,7 @@ const Projects = () => {
                     <div className="text-center">
                       <img 
                         src="/teluguinfo-logo.png" 
-                        alt="Telugu Info Logo" 
+                        alt="Telugu Info Logo " 
                         className="w-24 h-24 mx-auto mb-3 floating object-contain"
                       />
                       <p className="text-sm text-primary-300 font-medium">{project.category}</p>
