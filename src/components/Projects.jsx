@@ -54,9 +54,9 @@ const Projects = () => {
         <div className="container-max">
           <ScrollAnimations className="text-center mb-12" delay={0}>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Featured <span className="gradient-text">Projects</span>
+              Featured <span className="gradient-text gradient-highlight">Projects</span>
             </h2>
-            <p className="text-lg text-dark-300 max-w-2xl mx-auto">
+            <p className="text-lg text-dark-300 max-w-2xl mx-auto text-highlight">
               Explore my recent projects that showcase my skills in web development, AI integration, and problem-solving
             </p>
           </ScrollAnimations>
@@ -74,7 +74,7 @@ const Projects = () => {
                         alt="Telugu Info Logo " 
                         className="w-24 h-24 mx-auto mb-3 floating object-contain"
                       />
-                      <p className="text-sm text-primary-300 font-medium">{project.category}</p>
+                      <p className="text-sm text-primary-300 font-medium glow-text">{project.category}</p>
                     </div>
                   ) : project.title === "Prani Mitra Website" ? (
                     <div className="text-center">
@@ -83,14 +83,14 @@ const Projects = () => {
                         alt="Prani Mitra Logo" 
                         className="w-24 h-24 mx-auto mb-3 floating object-contain"
                       />
-                      <p className="text-sm text-primary-300 font-medium">{project.category}</p>
+                      <p className="text-sm text-primary-300 font-medium glow-text">{project.category}</p>
                     </div>
                   ) : (
                     <div className="text-center">
                       <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3 floating">
                         {getCategoryIcon(project.category)}
                       </div>
-                      <p className="text-sm text-primary-300 font-medium">{project.category}</p>
+                      <p className="text-sm text-primary-300 font-medium glow-text">{project.category}</p>
                     </div>
                   )}
                 </div>
@@ -99,12 +99,12 @@ const Projects = () => {
                   {/* Project Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2 project-title-highlight">{project.title}</h3>
                       <div className="flex items-center space-x-2">
-                        <span className="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                        <span className="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full glow-text">
                           {project.status}
                         </span>
-                        <span className="bg-primary-900 text-primary-300 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                        <span className="bg-primary-900 text-primary-300 text-xs font-medium px-2.5 py-0.5 rounded-full glow-text">
                           {project.category}
                         </span>
                       </div>
@@ -112,25 +112,25 @@ const Projects = () => {
                   </div>
 
                   {/* Project Description */}
-                  <p className="text-dark-300 mb-4 leading-relaxed">
+                  <p className="text-dark-300 mb-4 leading-relaxed text-highlight">
                     {project.description}
                   </p>
 
                   {/* Features */}
                   <div className="mb-4">
-                    <h4 className="font-semibold text-white mb-2 flex items-center">
+                    <h4 className="font-semibold text-white mb-2 flex items-center text-highlight">
                       <Zap className="h-4 w-4 mr-2 text-primary-400" />
                       Key Features
                     </h4>
                     <ul className="space-y-1">
                       {project.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-dark-300">
+                        <li key={idx} className="flex items-start text-sm text-dark-300 feature-highlight">
                           <span className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                           {feature}
                         </li>
                       ))}
                       {project.features.length > 3 && (
-                        <li className="text-sm text-primary-400 font-medium">
+                        <li className="text-sm text-primary-400 font-medium glow-text">
                           +{project.features.length - 3} more features
                         </li>
                       )}
@@ -139,13 +139,13 @@ const Projects = () => {
 
                   {/* Tech Stack */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-white mb-2 flex items-center">
+                    <h4 className="font-semibold text-white mb-2 flex items-center text-highlight">
                       <Database className="h-4 w-4 mr-2 text-primary-400" />
                       Tech Stack
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map((tech, idx) => (
-                        <span key={idx} className="bg-dark-600 text-dark-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                        <span key={idx} className="bg-dark-600 text-dark-200 text-xs font-medium px-2.5 py-1 rounded-full tech-highlight">
                           {tech}
                         </span>
                       ))}
@@ -163,7 +163,7 @@ const Projects = () => {
                       <ExternalLink className="h-4 w-4 mr-2" />
                       View Project
                     </a>
-                    <button className="px-4 py-2 border border-dark-500 hover:border-primary-500 hover:text-primary-400 text-dark-300 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
+                    <button className="px-4 py-2 border border-dark-500 hover:border-primary-500 hover:text-primary-400 text-dark-300 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center glow-text">
                       <Github className="h-4 w-4" />
                     </button>
                   </div>
@@ -176,20 +176,20 @@ const Projects = () => {
           {/* Project Stats */}
           <ScrollAnimations className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6" delay={400}>
             <div className="text-center p-6 bg-gradient-to-br from-primary-900 to-primary-800 rounded-lg floating border border-primary-700">
-              <div className="text-3xl font-bold text-primary-400 mb-2">2</div>
-              <div className="text-sm text-dark-300">Projects Completed</div>
+              <div className="text-3xl font-bold text-primary-400 mb-2 bounce-text">2</div>
+              <div className="text-sm text-dark-300 glow-text">Projects Completed</div>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-primary-900 to-primary-800 rounded-lg floating-delayed border border-primary-700">
-              <div className="text-3xl font-bold text-primary-400 mb-2">6+</div>
-              <div className="text-sm text-dark-300">Months Experience</div>
+              <div className="text-3xl font-bold text-primary-400 mb-2 bounce-text">6+</div>
+              <div className="text-sm text-dark-300 glow-text">Months Experience</div>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-primary-900 to-primary-800 rounded-lg floating border border-primary-700">
-              <div className="text-3xl font-bold text-primary-400 mb-2">3</div>
-              <div className="text-sm text-dark-300">Languages</div>
+              <div className="text-3xl font-bold text-primary-400 mb-2 bounce-text">3</div>
+              <div className="text-sm text-dark-300 glow-text">Languages</div>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-primary-900 to-primary-800 rounded-lg floating-delayed border border-primary-700">
-              <div className="text-3xl font-bold text-primary-400 mb-2">Top 3</div>
-              <div className="text-sm text-dark-300">Competition Rank</div>
+              <div className="text-3xl font-bold text-primary-400 mb-2 bounce-text">Top 3</div>
+              <div className="text-sm text-dark-300 glow-text">Competition Rank</div>
             </div>
           </ScrollAnimations>
         </div>

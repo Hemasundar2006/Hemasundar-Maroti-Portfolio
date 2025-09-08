@@ -78,9 +78,9 @@ const Contact = () => {
         <div className="container-max">
           <ScrollAnimations className="text-center mb-12" delay={0}>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Get In <span className="gradient-text">Touch</span>
+              Get In <span className="gradient-text gradient-highlight">Touch</span>
             </h2>
-            <p className="text-lg text-dark-300 max-w-2xl mx-auto">
+            <p className="text-lg text-dark-300 max-w-2xl mx-auto text-highlight">
               I'm always interested in new opportunities and exciting projects. 
               Let's connect and discuss how we can work together!
             </p>
@@ -90,11 +90,11 @@ const Contact = () => {
             {/* Contact Information */}
             <ScrollAnimations className="space-y-8" delay={200}>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+                <h3 className="text-2xl font-bold text-white mb-6 text-highlight">Let's Connect</h3>
                 <p className="text-dark-300 leading-relaxed mb-8">
                   Whether you have a project in mind, want to collaborate, or just want to say hello, 
-                  I'd love to hear from you. I'm particularly interested in React development projects, 
-                  AI integration challenges, and innovative startup ideas.
+                  I'd love to hear from you. I'm particularly interested in <span className="text-primary-300 glow-text">React development projects</span>, 
+                  <span className="text-primary-300 glow-text"> AI integration challenges</span>, and <span className="text-primary-300 glow-text">innovative startup ideas</span>.
                 </p>
               </div>
 
@@ -106,16 +106,16 @@ const Contact = () => {
                       {info.icon}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white">{info.title}</h4>
+                      <h4 className="font-semibold text-white text-highlight">{info.title}</h4>
                       {info.link ? (
                         <a 
                           href={info.link} 
-                          className="text-dark-300 hover:text-primary-400 transition-colors duration-200"
+                          className="text-dark-300 hover:text-primary-400 transition-colors duration-200 contact-highlight"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-dark-300">{info.value}</p>
+                        <p className="text-dark-300 contact-highlight">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -124,7 +124,7 @@ const Contact = () => {
 
               {/* Social Links */}
               <div>
-                <h4 className="font-semibold text-white mb-4">Follow Me</h4>
+                <h4 className="font-semibold text-white mb-4 text-highlight">Follow Me</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -132,7 +132,7 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 bg-dark-600 rounded-lg text-dark-300 transition-all duration-200 hover:bg-primary-900 ${social.color} wiggle`}
+                      className={`p-3 bg-dark-600 rounded-lg text-dark-300 transition-all duration-200 hover:bg-primary-900 ${social.color} wiggle glow-text`}
                       aria-label={social.name}
                     >
                       {social.icon}
@@ -145,21 +145,21 @@ const Contact = () => {
               <div className="bg-gradient-to-r from-green-900 to-green-800 p-6 rounded-lg border border-green-700 floating">
                 <div className="flex items-center mb-2">
                   <div className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                  <h4 className="font-semibold text-green-300">Available for Projects</h4>
+                  <h4 className="font-semibold text-green-300 text-highlight">Available for Projects</h4>
                 </div>
                 <p className="text-green-200 text-sm">
-                  Currently accepting freelance React development projects and open to collaboration opportunities.
+                  Currently accepting <span className="glow-text">freelance React development projects</span> and open to <span className="glow-text">collaboration opportunities</span>.
                 </p>
               </div>
             </ScrollAnimations>
 
             {/* Contact Form */}
             <ScrollAnimations className="bg-dark-700 p-8 rounded-lg border border-dark-600" delay={400}>
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-bold text-white mb-6 text-highlight">Send a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-white mb-2 text-highlight">
                       Name *
                     </label>
                     <input
@@ -174,7 +174,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2 text-highlight">
                       Email *
                     </label>
                     <input
@@ -191,7 +191,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-white mb-2 text-highlight">
                     Subject *
                   </label>
                   <input
@@ -207,7 +207,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-white mb-2 text-highlight">
                     Message *
                   </label>
                   <textarea

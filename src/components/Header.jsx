@@ -31,7 +31,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <Laptop2 className="h-8 w-8 text-primary-600 " />
-              <span className="text-xl font-bold gradient-text">Hemasundar Maroti</span>
+              <span className="text-xl font-bold gradient-text text-highlight">Hemasundar Maroti</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -40,7 +40,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-dark-200 hover:text-primary-400 transition-colors duration-200 font-medium"
+                  className="text-dark-200 hover:text-primary-400 transition-colors duration-200 font-medium underline-highlight"
                 >
                   {item.name}
                 </a>
@@ -51,7 +51,7 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-4">
               <a
                 href="mailto:marothihemasundar03@gmail.com"
-                className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200"
+                className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200 glow-text"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -60,7 +60,7 @@ const Header = () => {
                 href="https://github.com/Hemasundar2006"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200"
+                className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200 glow-text"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -69,7 +69,7 @@ const Header = () => {
                 href="https://www.linkedin.com/in/hemasundar-maroti"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200"
+                className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200 glow-text"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -78,7 +78,7 @@ const Header = () => {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200"
+              className="md:hidden p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200 glow-text"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -94,7 +94,7 @@ const Header = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-dark-200 hover:text-primary-400 transition-colors duration-200 font-medium"
+                    className="text-dark-200 hover:text-primary-400 transition-colors duration-200 font-medium underline-highlight"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -103,7 +103,7 @@ const Header = () => {
                 <div className="flex items-center space-x-4 pt-4 border-t border-dark-700">
                   <a
                     href="mailto:marothihemasundar03@gmail.com"
-                    className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200"
+                    className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200 glow-text"
                     aria-label="Email"
                   >
                     <Mail className="h-5 w-5" />
@@ -112,7 +112,7 @@ const Header = () => {
                     href="https://github.com/Hemasundar2006"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200"
+                    className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200 glow-text"
                     aria-label="GitHub"
                   >
                     <Github className="h-5 w-5" />
@@ -121,7 +121,7 @@ const Header = () => {
                     href="https://www.linkedin.com/in/hemasundar-maroti"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200"
+                    className="p-2 text-dark-400 hover:text-primary-400 transition-colors duration-200 glow-text"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="h-5 w-5" />

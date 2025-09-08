@@ -38,6 +38,184 @@
     @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
   }
 
+  /* Text Highlighting Effects */
+  .text-highlight {
+    @apply relative inline-block transition-all duration-300 cursor-pointer;
+  }
+
+  .text-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(120deg, rgba(14, 165, 233, 0.1) 0%, rgba(2, 132, 199, 0.2) 50%, rgba(3, 105, 161, 0.1) 100%);
+    border-radius: 4px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+
+  .text-highlight:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .text-highlight:hover {
+    @apply text-primary-300 transform scale-105;
+    text-shadow: 0 0 8px rgba(14, 165, 233, 0.3);
+  }
+
+  /* Gradient Text Highlight */
+  .gradient-highlight {
+    @apply relative inline-block transition-all duration-300 cursor-pointer;
+    background: linear-gradient(45deg, #ffffff, #e2e8f0, #ffffff);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-highlight:hover {
+    background: linear-gradient(45deg, #0ea5e9, #0284c7, #0369a1, #0ea5e9);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 1s ease infinite;
+    transform: scale(1.05);
+  }
+
+  /* Underline Highlight */
+  .underline-highlight {
+    @apply relative inline-block transition-all duration-300 cursor-pointer;
+  }
+
+  .underline-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0ea5e9, #0284c7);
+    transition: width 0.3s ease;
+  }
+
+  .underline-highlight:hover::after {
+    width: 100%;
+  }
+
+  .underline-highlight:hover {
+    @apply text-primary-300;
+  }
+
+  /* Glow Text Effect */
+  .glow-text {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .glow-text:hover {
+    @apply text-primary-300;
+    text-shadow: 
+      0 0 5px rgba(14, 165, 233, 0.5),
+      0 0 10px rgba(14, 165, 233, 0.3),
+      0 0 15px rgba(14, 165, 233, 0.2);
+    transform: scale(1.02);
+  }
+
+  /* Shake Text Effect */
+  .shake-text {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .shake-text:hover {
+    @apply text-primary-300;
+    animation: textShake 0.5s ease-in-out;
+  }
+
+  /* Bounce Text Effect */
+  .bounce-text {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .bounce-text:hover {
+    @apply text-primary-300;
+    animation: textBounce 0.6s ease;
+  }
+
+  /* Pulse Text Effect */
+  .pulse-text {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .pulse-text:hover {
+    @apply text-primary-300;
+    animation: textPulse 1s ease-in-out infinite;
+  }
+
+  /* Project Title Highlight */
+  .project-title-highlight {
+    @apply relative inline-block transition-all duration-300 cursor-pointer;
+  }
+
+  .project-title-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    right: -4px;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(2, 132, 199, 0.2));
+    border-radius: 6px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+
+  .project-title-highlight:hover::before {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .project-title-highlight:hover {
+    @apply text-primary-300 transform scale-105;
+  }
+
+  /* Tech Stack Highlight */
+  .tech-highlight {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .tech-highlight:hover {
+    @apply bg-primary-900 text-primary-200 transform scale-110;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+  }
+
+  /* Feature List Highlight */
+  .feature-highlight {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .feature-highlight:hover {
+    @apply text-primary-300 transform translate-x-2;
+  }
+
+  /* Contact Info Highlight */
+  .contact-highlight {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  .contact-highlight:hover {
+    @apply text-primary-300 transform scale-105;
+    text-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+  }
+
   /* Moving Background Animations */
   .moving-bg {
     background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #475569, #0284c7, #0369a1);
@@ -178,6 +356,24 @@
     transform: translateY(-100vh) rotate(360deg);
     opacity: 0;
   }
+}
+
+/* New Text Animation Keyframes */
+@keyframes textShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
+@keyframes textBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
+@keyframes textPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 /* Scroll-triggered animations */

@@ -23,10 +23,10 @@ const About = () => {
               </div>
               
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-                Hi, I'm <span className="gradient-text">Hemasundar Maroti</span>
+                Hi, I'm <span className="gradient-text gradient-highlight">Hemasundar Maroti</span>
               </h1>
               
-              <p className="text-xl text-dark-300 mb-6">
+              <p className="text-xl text-dark-300 mb-6 text-highlight">
                 B.Tech Student & React Developer passionate about building innovative web solutions
               </p>
               
@@ -43,16 +43,16 @@ const About = () => {
             {/* Right Column - Detailed Info */}
             <ScrollAnimations className="space-y-8" delay={200}>
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">About Me</h2>
+                <h2 className="text-2xl font-bold text-white mb-6 text-highlight">About Me</h2>
                 <p className="text-dark-300 leading-relaxed mb-6">
-                  I'm a passionate 2nd-year B.Tech student in Electronics and Communication Engineering, 
-                  with a strong focus on web development. Currently working as a React Developer at Spotmies, 
+                  I'm a passionate <span className="text-primary-300 glow-text">2nd-year B.Tech student</span> in Electronics and Communication Engineering, 
+                  with a strong focus on <span className="text-primary-300 glow-text">web development</span>. Currently working as a <span className="text-primary-300 glow-text">React Developer at Spotmies</span>, 
                   I love creating user-friendly applications and exploring the intersection of technology 
                   and real-world problem solving.
                 </p>
                 <p className="text-dark-300 leading-relaxed">
-                  My interests span from freelancing in web development to building innovative startup ideas 
-                  involving AI, IVR systems, and agriculture support. I'm particularly excited about creating 
+                  My interests span from <span className="text-primary-300 glow-text">freelancing in web development</span> to building innovative startup ideas 
+                  involving <span className="text-primary-300 glow-text">AI, IVR systems, and agriculture support</span>. I'm particularly excited about creating 
                   custom analytics systems and contributing to projects that make a real difference in people's lives.
                 </p>
               </div>
@@ -62,39 +62,39 @@ const About = () => {
                 <div className="bg-dark-700 p-4 rounded-lg card-hover floating border border-dark-600">
                   <div className="flex items-center space-x-3 mb-2">
                     <GraduationCap className="h-5 w-5 text-primary-400" />
-                    <h3 className="font-semibold text-white">Education</h3>
+                    <h3 className="font-semibold text-white text-highlight">Education</h3>
                   </div>
                   <p className="text-sm text-dark-300">
-                    B.Tech in ECE<br />
-                    2nd Year Student
+                    <span className="glow-text">B.Tech in ECE</span><br />
+                    <span className="glow-text">2nd Year Student</span>
                   </p>
                 </div>
 
                 <div className="bg-dark-700 p-4 rounded-lg card-hover floating-delayed border border-dark-600">
                   <div className="flex items-center space-x-3 mb-2">
                     <MapPin className="h-5 w-5 text-primary-400" />
-                    <h3 className="font-semibold text-white">Location</h3>
+                    <h3 className="font-semibold text-white text-highlight">Location</h3>
                   </div>
-                  <p className="text-sm text-dark-300">India</p>
+                  <p className="text-sm text-dark-300 glow-text">India</p>
                 </div>
 
                 <div className="bg-dark-700 p-4 rounded-lg card-hover floating border border-dark-600">
                   <div className="flex items-center space-x-3 mb-2">
                     <Languages className="h-5 w-5 text-primary-400" />
-                    <h3 className="font-semibold text-white">Languages</h3>
+                    <h3 className="font-semibold text-white text-highlight">Languages</h3>
                   </div>
                   <p className="text-sm text-dark-300">
-                    English, Telugu, Hindi
+                    <span className="glow-text">English, Telugu, Hindi</span>
                   </p>
                 </div>
 
                 <div className="bg-dark-700 p-4 rounded-lg card-hover floating-delayed border border-dark-600">
                   <div className="flex items-center space-x-3 mb-2">
                     <Heart className="h-5 w-5 text-primary-400" />
-                    <h3 className="font-semibold text-white">Interests</h3>
+                    <h3 className="font-semibold text-white text-highlight">Interests</h3>
                   </div>
                   <p className="text-sm text-dark-300">
-                    Web Development, AI, Startups
+                    <span className="glow-text">Web Development, AI, Startups</span>
                   </p>
                 </div>
               </div>
