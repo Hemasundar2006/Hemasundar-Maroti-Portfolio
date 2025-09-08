@@ -17,17 +17,23 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    })
+    try {
+      const res = await fetch('https://hemasundar-maroti-portfolio-backend.onrender.com/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      const data = await res.json()
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed to send')
+      // success
+      alert('Message sent successfully!')
+      setFormData({ name: '', email: '', subject: '', message: '' })
+    } catch (err) {
+      console.error(err)
+      alert('Failed to send message. Please try again later.')
+    }
   }
 
   const contactInfo = [
@@ -194,16 +200,20 @@ const Contact = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-white mb-2 text-highlight">
                     Subject *
                   </label>
-                  <input
-                    type="text"
+                  <select
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-dark-500 bg-dark-600 text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 placeholder-dark-400"
-                    placeholder="What's this about?"
-                  />
+                    className="w-full px-4 py-3 border border-dark-500 bg-dark-600 text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                  >
+                    <option value="" disabled>Select a subject</option>
+                    <option value="Freelancing Projects">Freelancing Projects</option>
+                    <option value="Startup ideas">Startup ideas</option>
+                    <option value="collabrations">collabrations</option>
+                    <option value="gudence">gudence</option>
+                  </select>
                 </div>
 
                 <div>
