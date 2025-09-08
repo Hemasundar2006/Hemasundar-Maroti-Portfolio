@@ -61,7 +61,7 @@ const Experience = () => {
                           </div>
                           {exp.current && (
                             <span className="bg-green-900 text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                              Current
+                              Completed
                             </span>
                           )}
                         </div>

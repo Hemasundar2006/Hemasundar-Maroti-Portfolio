@@ -46,7 +46,7 @@ const About = () => {
                 <h2 className="text-2xl font-bold text-white mb-6 text-highlight">About Me</h2>
                 <p className="text-dark-300 leading-relaxed mb-6">
                   I'm a passionate <span className="text-primary-300 glow-text">2nd-year B.Tech student</span> in Electronics and Communication Engineering, 
-                  with a strong focus on <span className="text-primary-300 glow-text">web development</span>. Currently working as a <span className="text-primary-300 glow-text">React Developer at Spotmies</span>, 
+                  with a strong focus on <span className="text-primary-300 glow-text">web development</span>. Worked as a <span className="text-primary-300 glow-text">React Developer at Spotmies</span>, 
                   I love creating user-friendly applications and exploring the intersection of technology 
                   and real-world problem solving.
                 </p>
