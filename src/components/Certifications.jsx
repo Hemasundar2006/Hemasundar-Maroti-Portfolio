@@ -5,6 +5,20 @@ import ScrollAnimations from './ScrollAnimations'
 const Certifications = () => {
   const certifications = [
     {
+      title: 'React Developer Certification',
+      issuer: 'Spotmies',
+      date: 'Nov 2024 - May 2025',
+      link: null,
+      description: 'Recognized for contributions in React-based projects and UI improvements.'
+    },
+    {
+      title: 'Performance Marketing Masterclass',
+      issuer: 'WsCube Tech',
+      date: '2025',
+      link: null,
+      description: 'Attended an intensive masterclass covering modern performance marketing strategies.'
+    },
+    {
       title: 'Certificate of Participation in SEO Training',
       program: '2-Day SEO Training Program',
       recipient: 'Hema Sundar Maroti',
@@ -15,20 +29,6 @@ const Certifications = () => {
       link: null,
       description:
         'This certificate acknowledges successful participation and completion of the program, which provided practical knowledge and skills in Search Engine Optimization (SEO).'
-    },
-    {
-      title: 'Performance Marketing Masterclass',
-      issuer: 'WsCube Tech',
-      date: '2025',
-      link: null,
-      description: 'Attended an intensive masterclass covering modern performance marketing strategies.'
-    },
-    {
-      title: 'React Developer Certification',
-      issuer: 'Spotmies (Internal)',
-      date: '2024',
-      link: null,
-      description: 'Recognized for contributions in React-based projects and UI improvements.'
     }
   ]
 
@@ -46,8 +46,10 @@ const Certifications = () => {
           </ScrollAnimations>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {certifications.map((cert, idx) => (
-              <ScrollAnimations key={idx} delay={idx * 150}>
+            {certifications.map((cert, idx) => {
+              const isCenterSecondRow = cert.title === 'Certificate of Participation in SEO Training'
+              return (
+              <ScrollAnimations key={idx} delay={idx * 150} className={isCenterSecondRow ? 'md:col-span-2 md:max-w-xl md:mx-auto' : ''}>
                 <div className="bg-dark-700 p-6 rounded-lg border border-dark-600 card-hover floating">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center">
@@ -99,7 +101,7 @@ const Certifications = () => {
                   )}
                 </div>
               </ScrollAnimations>
-            ))}
+            )})}
           </div>
         </div>
       </div>
