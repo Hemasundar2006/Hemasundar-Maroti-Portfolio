@@ -6,6 +6,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     subject: '',
     message: ''
   })
@@ -29,7 +30,7 @@ const Contact = () => {
       if (!res.ok || !data.ok) throw new Error(data.error || 'Failed to send')
       // success
       alert('Message sent successfully!')
-      setFormData({ name: '', email: '', subject: '', message: '' })
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
     } catch (err) {
       console.error(err)
       alert('Failed to send message. Please try again later.')
@@ -197,6 +198,21 @@ const Contact = () => {
                 </div>
 
                 <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-white mb-2 text-highlight">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-dark-500 bg-dark-600 text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 placeholder-dark-400"
+                    placeholder="+91 1234567890"
+                  />
+                </div>
+
+                <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-white mb-2 text-highlight">
                     Subject *
                   </label>
@@ -209,6 +225,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 border border-dark-500 bg-dark-600 text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="" disabled>Select a subject</option>
+                    <option value="Contact">Contact</option>
                     <option value="Freelancing Projects">Freelancing Projects</option>
                     <option value="Startup ideas">Startup ideas</option>
                     <option value="collabrations">collabrations</option>
