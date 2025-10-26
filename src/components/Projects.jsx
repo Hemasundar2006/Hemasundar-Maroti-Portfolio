@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExternalLink, Github, Code, Database, Smartphone, Globe, Users, Zap } from 'lucide-react'
+import { ExternalLink, Github, Code, Database, Smartphone, Globe, Users, Zap, Cpu } from 'lucide-react'
 import ScrollAnimations from './ScrollAnimations'
 
 const Projects = () => {
@@ -34,6 +34,22 @@ const Projects = () => {
       category: "AI/IVR Integration",
       status: "Completed",
       link: "https://prani-mitra1.vercel.app/"
+    },
+    {
+      title: "Indoor Air Quality Monitoring System",
+      description: "An IoT-based project developed using ESP32 microcontroller to ensure a safe and healthy indoor environment by continuously monitoring temperature, humidity, air pressure, and gas levels.",
+      image: "/api/placeholder/600/400",
+      features: [
+        "Real-time monitoring of temperature, humidity, air pressure, and gas levels",
+        "16x2 I2C LCD display for data visualization and warnings",
+        "Automatic fan activation when dangerous gas levels are detected",
+        "Wi-Fi capability for future IoT platform integration",
+        "Sensor integration: DHT22, BMP280, and MQ-2"
+      ],
+      techStack: ["ESP32", "DHT22", "BMP280", "MQ-2", "LCD", "Arduino IDE", "C/C++"],
+      category: "IoT/Embedded",
+      status: "Completed",
+      link: "#"
     }
   ]
 
@@ -43,6 +59,8 @@ const Projects = () => {
         return <Code className="h-5 w-5" />
       case "AI/IVR Integration":
         return <Smartphone className="h-5 w-5" />
+      case "IoT/Embedded":
+        return <Cpu className="h-5 w-5" />
       default:
         return <Globe className="h-5 w-5" />
     }
@@ -176,7 +194,7 @@ const Projects = () => {
           {/* Project Stats */}
           <ScrollAnimations className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6" delay={400}>
             <div className="text-center p-6 bg-gradient-to-br from-primary-900 to-primary-800 rounded-lg floating border border-primary-700">
-              <div className="text-3xl font-bold text-primary-400 mb-2 bounce-text">2</div>
+              <div className="text-3xl font-bold text-primary-400 mb-2 bounce-text">3</div>
               <div className="text-sm text-dark-300 glow-text">Projects Completed</div>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-primary-900 to-primary-800 rounded-lg floating-delayed border border-primary-700">
