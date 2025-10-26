@@ -32,7 +32,7 @@ const Projects = () => {
       ],
       techStack: ["React.js", "Node.js", "Express", "MongoDB", "AI/IVR APIs"],
       category: "AI/IVR Integration",
-      status: "Completed",
+      status: "Prototype Building Stage",
       link: "https://prani-mitra1.vercel.app/"
     },
     {
